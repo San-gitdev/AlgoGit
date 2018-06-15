@@ -10,11 +10,9 @@ import array
 def RecFn(n):
     i=0
     j=1
-    #for i in range (0,1):
-      #  print (RecArr[i])
     for _ in range(2,n+1):
-        i,j=j,i+j
-    print (j%10, end="\n")
+        i,j=j%10,(i+j)%10
+    print(j%10)
     return
 if __name__ == '__main__':
     a = int(input())
