@@ -9,10 +9,6 @@ def RecFn(n):
         RecArr.append((RecArr[x-1]+RecArr[x-2]))
         print (x, RecArr[x], end="\n")
     return
-
-
-
-
 if __name__ == '__main__':
     a = int(input())
     RecFn(a)
