@@ -1,10 +1,11 @@
+# python3
 #   Task. Given an integer 𝑛, find the 𝑛th Fibonacci number 𝐹𝑛.
 #   Input Format. The input consists of a single integer 𝑛.
 #   Constraints. 0 ≤ 𝑛 ≤ 45.
 #   Output Format. Output 𝐹𝑛.
 
 
-# python3
+
 import array
 
 def RecFn(n):
@@ -17,7 +18,7 @@ def RecFn(n):
     return
 if __name__ == '__main__':
     a = int(input())
-    if(a==0 or a==1):
+    if(a==0 or a==10):
         print(a)
     else:
         RecFn(a)
