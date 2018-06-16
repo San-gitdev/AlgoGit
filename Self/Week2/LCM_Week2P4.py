@@ -26,4 +26,4 @@ if __name__ == '__main__':
         c=lcm(b,a)
     else:
         c=lcm(a,b)
-    print (int(c))
+    print ((c))
