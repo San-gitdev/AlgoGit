@@ -18,7 +18,8 @@ def lcm(y,z):
     x= gcd(y,z)
     #print ("GCD of ", y, " and ", z, " is ", x)
     #print(x,y,z)
-    return ((y*z/x))
+    intermed = z/x
+    return ((y*intermed))
 
 if __name__ == '__main__':
     a, b = map(int, input().split())
@@ -26,4 +27,4 @@ if __name__ == '__main__':
         c=lcm(b,a)
     else:
         c=lcm(a,b)
-    print ((c))
+    print (int (c))

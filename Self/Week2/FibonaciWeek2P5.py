@@ -7,7 +7,8 @@ def pisano(n,m):
     j=1
     for _ in range(2,n+1):
         i,j=j,i+j
-    print (j%m, end="\n")
+    #print ("Fibonaci number ", n, " is ", j, " And relvant pisano number is ", j%m, end="\n")
+    print(j%m)
     return
 
 if __name__=='__main__':
