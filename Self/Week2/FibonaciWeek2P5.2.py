@@ -10,23 +10,29 @@
 def pisano(n,m):
     i=0
     j=1
-    s="01"
+    s="0;1;"
     if(n<7):
         loopcnt = 1000
     else:
         loopcnt = n*n*n
     for _ in range(2,loopcnt):
         i,j=j,i+j
-        s = s+str(j%m)
+        s = s+str(j%m)+";"
+      #  print(s)
         x=(s+s).find(s,1,-1)
+     #   print(x)
         if(x!=-1):
-            print(x)
-            print(s[:x])
-            pattern= s[:x]
+ #           print(x)
+  #          print(s[:x])
+     #       pattern= s[:x]
             break
-    print("Pattern identified for modulo ", m, " is: ", pattern, " with length ", x)
+    x=s.count(";")/2
+    #print("Pattern identified for modulo ", m, " is: ", pattern, " with length ", s.count(";")/2)
     k=n%x
-    print(pattern[k])
+  #  print(k)
+    a=s.split(";")
+    print(a[int(k)])
+   # print(a)
     return
                         
     #print ("Fibonaci number ", n, " is ", j, " And relvant pisano number is ", j%m, end="\n")
