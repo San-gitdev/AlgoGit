@@ -11,16 +11,20 @@ def pisano(n,m):
     i=0
     j=1
     s="01"
-    for _ in range(2,n+1):
+    if(n<7):
+        loopcnt = 1000
+    else:
+        loopcnt = n*n*n
+    for _ in range(2,loopcnt):
         i,j=j,i+j
         s = s+str(j%m)
         x=(s+s).find(s,1,-1)
         if(x!=-1):
-           # print(x)
-            #print(s[:x])
+            print(x)
+            print(s[:x])
             pattern= s[:x]
             break
-    #print("Pattern identified for modulo ", m, " is: ", pattern, " with length ", x)
+    print("Pattern identified for modulo ", m, " is: ", pattern, " with length ", x)
     k=n%x
     print(pattern[k])
     return
@@ -33,6 +37,8 @@ def pisano(n,m):
 
 if __name__=='__main__':
     a, b = map(int, input().split())
+    if(a<3):
+        print("1")
     pisano(a,b)
 
 
